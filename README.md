@@ -15,17 +15,13 @@ analyze loan data in real-time, enabling them to make informed decisions, mitiga
 
 - Step 1 : Load data into Power BI Desktop, dataset is a csv file.
 - Step 2 : As Data contains the columns related to the applicants, Income, loan
-- Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
-- Step 4- Data has been cleanded after removing the null values.
-- Step 5-: A new column "Good vs Bad Loan" added after goruping the loan status column. where charged off grouped into Bad loan and current and fully paid grouped as Good loan
-- Step 4 : This is a three page report. Divided into Summary, Overview and Details.
-- Step 4 : Three Table created one where all the measures placed. Second Calender Table and Third Category Table.
-- Step 5-: 
-- Step 4 : 
-- Step 4 :
-          
-- Step 10 : New measure was created to find Total Loan of Application.
+- Step 3 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
+- Step 4 :Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
+- Step 5- Data has been cleanded after removing the null values.
+- Step 6-: A new column "Good vs Bad Loan" added after goruping the loan status column. where charged off grouped into Bad loan and current and fully paid grouped as Good loan
+- Step 7 : This is a three page report. Divided into Summary, Overview and Details.
+- Step 8 : Three Table created one where all the measures placed. Second Calender Table and Third Category Table.        
+- Step 9 : New measure was created to find Total Loan of Application.
 
 Following DAX expression was written for the same,
         
@@ -33,10 +29,10 @@ Following DAX expression was written for the same,
         
 A card visual was used to represent for this.
 
-![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/b263546b-cd3b-45c4-94c7-4d3cb254be75)
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/96bb6b0b-7c54-4b98-b08d-3f4ab11ba2a4)
 
         
- - Step 11 : New measure was created to find the Total Funded Amount,
+ - Step 10 : New measure was created to find the Total Funded Amount,
  
  Following DAX expression was written for this,
  
@@ -44,11 +40,9 @@ A card visual was used to represent for this.
  
  A card visual was used to represent this.
  
-![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/40e64b5c-0953-4cb7-a0fe-7b5176cb8823)
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/142c40a5-4998-4744-8dda-44cc48ccfa4c)
 
-
- 
- - Step 12 : New measure was created to calculate the Total Amount Received.
+ - Step 11 : New measure was created to calculate the Total Amount Received.
  
  Following DAX expression was written to find this,
  
@@ -57,7 +51,7 @@ A card visual was used to represent for this.
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/bde0c121-dae1-400e-aac6-3fe706328dfe)
 
  
- - Step 13 : New measure was created to calculate the Average Interest Rate.
+ - Step 12 : New measure was created to calculate the Average Interest Rate.
  
  Following DAX expression was written to find this,
  
@@ -66,7 +60,7 @@ A card visual was used to represent for this.
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/286c7782-c408-42d3-8116-a58f6159a512)
 
 
- - Step 14 : New measure was created to calculate Average Debt to Income (DTI) .
+ - Step 13 : New measure was created to calculate Average Debt to Income (DTI) .
  
  Following DAX expression was written to find this,
  
@@ -74,7 +68,7 @@ A card visual was used to represent for this.
  
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/847d1faa-c089-475e-94bc-a2b26487d4b1)
 
- - Step 15 : New measure was created to calculate Good Loan %.
+ - Step 14 : New measure was created to calculate Good Loan %.
  
  Following DAX expression was written to find this
  
@@ -92,7 +86,7 @@ A card visual was used to represent for this.
  
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/844b10e6-7a4c-4c41-ba99-20f8137ecf40)
 
- - Step 15 : New measure was created to calculate Bad Loan %.
+ - Step 16 : New measure was created to calculate Bad Loan %.
  
  Following DAX expression was written to find this
  
@@ -101,7 +95,7 @@ A card visual was used to represent for this.
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/bd61f70b-73e4-4952-acdc-163450cc7052)
 
 
- - Step 15 : 3 measure was created to calculate the Bad loan application, Bad loan funded amount and Bad loan received amount.
+ - Step 17 : 3 measure was created to calculate the Bad loan application, Bad loan funded amount and Bad loan received amount.
  
  Following DAX expression was written to find this
  
@@ -111,12 +105,25 @@ A card visual was used to represent for this.
  
 ![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/e83b9a4f-b83d-4351-a39a-b9f88018f366)
 
+ - Step 18 : A Measure was created to to make the visuals dynamic.
+  
+ Following DAX expression was written to find this
+
+          Status Category = VAR _selected_value_category = SELECTEDVALUE('Table'[Category])
+          RETURN
+              SWITCH(TRUE(),_selected_value_category="Total Loan Application", [Total Loan Application],
+              _selected_value_category="Total Funded Amount", [Total Funded Amount],
+              _selected_value_category="Total Amount Received", [Total Amount Received])
 
 
+ - Step 19 : 2 Measures created to make the title dynamic.
+ 
+ Following DAX expression was written to find this
+ 
+         Dynamic Age title = SELECTEDVALUE('Table'[Category])&" by Age"
+         Dynamic Purpose title = SELECTEDVALUE('Table'[Category]) &" by Purpose"
 
-# Snapshot of Dashboard (Power BI Service)
 
-![image](https://github.com/Ambikapandey0821/HR-Analytics-Report/assets/162020155/b0a482c9-987e-4f36-805e-abbebc09248e)
 
  
  # Report Snapshot (Power BI DESKTOP)
