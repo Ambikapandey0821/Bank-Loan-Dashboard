@@ -1,4 +1,4 @@
-# Bank-Loan-Dashboard
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/a5d0c18b-de59-4aa3-98f3-48425ba05350)# Bank-Loan-Dashboard
 
 ### Dashboard Link : https://app.powerbi.com/reportEmbed?reportId=86b80952-3d95-4d6e-bc66-c4dfdd656110&autoAuth=true&ctid=9bb2360a-034c-4ecf-8228-aafe1a12b953
 
@@ -61,6 +61,7 @@ A card visual was used to represent for this.
 
 
  - Step 13 : New measure was created to calculate Average Debt to Income (DTI) .
+      Note - Debt-to-income ratio (DTI) compares how much you owe each month to how much you earn. Specifically, it's the percentage of your gross monthly income (before taxes) that goes towards payments for rent, mortgage, credit cards, or other debt.
  
  Following DAX expression was written to find this,
  
@@ -122,75 +123,57 @@ A card visual was used to represent for this.
  
          Dynamic Age title = SELECTEDVALUE('Table'[Category])&" by Age"
          Dynamic Purpose title = SELECTEDVALUE('Table'[Category]) &" by Purpose"
-
-
+         Dynamic Month title = SELECTEDVALUE('Table'[Category]) &" by Month"
 
  
  # Report Snapshot (Power BI DESKTOP)
 
  
-![image](https://github.com/Ambikapandey0821/HR-Analytics-Report/assets/162020155/bcf3b40e-e9c3-4aca-8c69-730c57b6edfa)
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/7e802851-1e86-4f5d-b853-dd9ee897d8c0)
+
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/1580d493-9905-47d0-86ba-16821750aebd)
+
+![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/b22d78a5-cbd2-4d54-96c0-1cf1b73e8f4f)
 
 # Insights
 
-A single page report was created on Power BI Desktop & it was then published to Power BI Service.
-
 Following inferences can be drawn from the dashboard;
 
-# Total Number of Employees = 1470
+# Total Number of Loan Applications = 38.6K
 
- -  Number of Employees (Male) = 882 
+ - Total Amount Funded = 435.8 M 
 
- -  Number of Employee (Female) = 588 
+ - Total Amount Received = 473.1 M 
 
- -  Number of Employees Attrited (Male) = 150 (17 %)
+ - Average Interest Rate = 12 %
 
- - Number of Employees Attrited (Female) = 87 (14.8 %)
-
- Thus, higher number of Male Employees Leaving the Organisation.
+ - Average DTI  = 13.3 %
            
+ # Loan
+ 
+ - Good Loab = 86.2%
+ - Bad Loan = 13.8%
+ 
+ 
+ # Tenure
+ 
+ -  73 % Loans are issued for 36 Months
+ -  27 % Loans are issued for 60 Months
 
- # Some other insights
- 
- # Attrition by Years at Company
- 
- - 41.4% Employee leave the company with in the less than One Year.
- 
- - 35.5 % Employee leave the company in the One Year.
- 
- - 20.5 % Employee leave the company in the two Year.
- 
-   Thus, we can see that 0-1 year has the highest attrition rate. And if employees works for 5 years then attrition rate comes to 11%.
- 
- # Age Group
- 
- -  32.5 % Employees leave the Organisation of '18-25' age group.
- 
- -  19 % Employees leave the Organisation of '26-35' age group.
- 
- -  10.6 % Employees leave the Organisation of '36-45' age group.
- 
- -  15.1 % Employees leave the Organisation of '46-55' age group.
-
- -  19.2 % Employees leave the Organisation of '55+' age group.
- 
-   Thus, we can see that '18-25' Agw group has the highest attrition rate. And '36-45' Age group has the lowest Attrition rate.
          
-# Education Field
+# Purpose - Top 5 Purpose for loans 
 
-- 34 % Employee leave the orgnisation from life Science Education Field.
+- Debt Consolidation
+- Credit card
+- Others
+- Home Improvement
+- Major Purchase
 
-- 29.3 % Employee leave the orgnisation from Medical Field.
 
-- 22 % Employee leave the orgnisation from Technical Field.
+# States - Top % States for Loans
 
-- 13 % Employee leave the orgnisation from Marketing Field.
-
-- 2.67 % Employee leave the orgnisation from Human Recources Field.
-       
-  Thus, we can see that 34 %  Attrition is from life Science which is the highest attrition rate. And 2.67 % Employee leave the orgnisation from Human Recources Field which is lowest.
-
-# Job Role and Job Satisfaction
-
-- 1 is the lowest rating and 4 is the highest rating.
-- Lowest Rating has the highest Attrition rate. and Highest rating has the lowest Attrition rate.
+- CA
+- NY
+- FL
+- TX
+- NJ
