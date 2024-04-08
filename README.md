@@ -1,4 +1,4 @@
-![image](https://github.com/Ambikapandey0821/Bank-Loan-Dashboard/assets/162020155/a5d0c18b-de59-4aa3-98f3-48425ba05350)# Bank-Loan-Dashboard
+# Bank-Loan-Dashboard
 
 ### Dashboard Link : https://app.powerbi.com/reportEmbed?reportId=86b80952-3d95-4d6e-bc66-c4dfdd656110&autoAuth=true&ctid=9bb2360a-034c-4ecf-8228-aafe1a12b953
 
@@ -170,7 +170,7 @@ Following inferences can be drawn from the dashboard;
 - Major Purchase
 
 
-# States - Top % States for Loans
+# States - Top 5 States for Loans
 
 - CA
 - NY
