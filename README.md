@@ -151,7 +151,7 @@ Following inferences can be drawn from the dashboard;
            
  # Loan
  
- - Good Loab = 86.2%
+ - Good Loan = 86.2%
  - Bad Loan = 13.8%
  
  
